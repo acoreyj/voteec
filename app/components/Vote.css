@@ -1,0 +1,25 @@
+ion-card {
+  text-align: center;
+}
+
+ion-card-content p, ion-button{
+  font-size: 16px!important;
+}
+
+@media (min-width: 700px) {
+	ion-card-content p, ion-button{
+		font-size: 18px!important;
+	  }
+	  
+	ion-card.footer ion-card-title h1 {
+		letter-spacing: 1px;
+	}
+	
+	ion-card.footer ion-card-subtitle h2 {
+		letter-spacing: 1px;
+	}
+}
+
+.section .heading ion-card-title h1, .section .heading ion-card-subtitle h2{
+	color: white;
+}
