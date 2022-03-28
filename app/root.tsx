@@ -14,7 +14,7 @@ import appStyleUrl from '~/styles/app.css';
 import pageStyleUrl from '~/styles/page.css';
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "Vote EC",
+  title: "Vote Eau Claire",
   viewport: "width=device-width,initial-scale=1",
 });
 export let links: LinksFunction = () => {
