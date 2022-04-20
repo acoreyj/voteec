@@ -83,13 +83,13 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
               <ReactFitText maxFontSize={55} compressor={1.5}>
                 <h2>
                   <span className="line font-semibold">
-                    Eau Claire's Next Election is
+                    Eau Claire's Next Election is the 2022 Partisan Primary on
                   </span>
                 </h2>
               </ReactFitText>
               <ReactFitText minFontSize={30} maxFontSize={85}>
                 <h1>
-                  <span className="line font-extrabold">TUESDAY, APRIL 5</span>
+                  <span className="line font-extrabold">TUESDAY, AUGUST 9</span>
                 </h1>
               </ReactFitText>
             </div>
@@ -134,7 +134,7 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
                 >
                   ONLINE
                 </a>
-                <p className="subtext text-center">By March 16</p>
+                <p className="subtext text-center">By July 20</p>
               </div>
               <div className="flex basis-1/3 flex-col gap-1">
                 <a
@@ -168,7 +168,7 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
                   >
                     your clerk
                   </a>{" "}
-                  by March 16.
+                  by July 20.
                 </p>
               </div>
             </div>
@@ -177,7 +177,7 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
         <div className="w-full bg-redTransparent py-8 px-4">
           <VoteSection
             slotTitle="Vote Early in Person"
-            slotSubtitle="March 22 - April 1"
+            slotSubtitle="Dates to be determined"
           >
             <div className="items-center text-center">
               <p>
@@ -200,7 +200,8 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
                 <div className="text-left">
                   <p>Drive Thru In-Person Absentee Voting</p>
                   <br />
-                  <p>
+                  <p>To be determined</p>
+                  {/* <p>
                     <strong>Location:</strong> City Hall parking lot, 203 S.
                     Farwell St.
                   </p>
@@ -213,7 +214,7 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
                   <p>
                     <strong>Hours:</strong> Monday through Friday: 9 a.m. to 4
                     p.m.
-                  </p>
+                  </p> */}
                 </div>
               </DaisyCard>
               <DaisyCard
@@ -349,7 +350,7 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
           </VoteSection>
         </div>
         <div className="w-full bg-redTransparent py-8 px-4">
-          <VoteSection slotTitle="VOTE TUESDAY APRIL 5">
+          <VoteSection slotTitle="VOTE TUESDAY AUGUST 9">
             <p>
               Find your{" "}
               <a
