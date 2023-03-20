@@ -83,13 +83,13 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
               <ReactFitText maxFontSize={55} compressor={1.5}>
                 <h2>
                   <span className="line font-semibold">
-                    Eau Claire's Next Election is the 2022 Partisan Primary on
+                    Eau Claire's Next Election is the 2023 Spring Election on
                   </span>
                 </h2>
               </ReactFitText>
               <ReactFitText minFontSize={30} maxFontSize={85}>
                 <h1>
-                  <span className="line font-extrabold">TUESDAY, AUGUST 9</span>
+                  <span className="line font-extrabold">TUESDAY, APRIL 4</span>
                 </h1>
               </ReactFitText>
             </div>
@@ -134,7 +134,7 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
                 >
                   ONLINE
                 </a>
-                <p className="subtext text-center">By July 20</p>
+                <p className="subtext text-center">By March 15</p>
               </div>
               <div className="flex basis-1/3 flex-col gap-1">
                 <a
@@ -146,7 +146,8 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
                   IN PERSON
                 </a>
                 <p className="subtext text-center">
-                  Up to and including on election day
+                  March 31, 2023 @ 5:00 p.m at your Municipal Clerk's Office or
+                  register at your polling place on election day.
                 </p>
               </div>
               <div className="flex basis-1/3 flex-col gap-1">
@@ -168,7 +169,7 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
                   >
                     your clerk
                   </a>{" "}
-                  by July 20.
+                  by March 15.
                 </p>
               </div>
             </div>
@@ -177,7 +178,7 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
         <div className="w-full bg-redTransparent py-8 px-4">
           <VoteSection
             slotTitle="Vote Early in Person"
-            slotSubtitle="Dates to be determined"
+            slotSubtitle="March 21 - March 31"
           >
             <div className="items-center text-center">
               <p>
@@ -194,13 +195,16 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
                 .<br /> <br />
               </p>
               <DaisyCard
-                title="City of Eau Claire Residents"
+                title="Search For Your Options"
                 className="min-w-full bg-base-100 shadow-xl"
               >
                 <div className="text-left">
-                  <p>Drive Thru In-Person Absentee Voting</p>
-                  <br />
-                  <p>To be determined</p>
+                  <a
+                    className="btn btn-warning btn-lg"
+                    href="https://myvote.wi.gov/en-us/Vote-Absentee-In-Person"
+                  >
+                    Search by address
+                  </a>
                   {/* <p>
                     <strong>Location:</strong> City Hall parking lot, 203 S.
                     Farwell St.
@@ -217,7 +221,7 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
                   </p> */}
                 </div>
               </DaisyCard>
-              <DaisyCard
+              {/* <DaisyCard
                 title="Non Eau Claire Residents"
                 className="mt-4 min-w-full bg-base-100 shadow-xl"
               >
@@ -237,7 +241,7 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
                   </a>
                   .
                 </p>
-              </DaisyCard>
+              </DaisyCard> */}
             </div>
           </VoteSection>
         </div>
@@ -350,7 +354,7 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
           </VoteSection>
         </div>
         <div className="w-full bg-redTransparent py-8 px-4">
-          <VoteSection slotTitle="VOTE TUESDAY AUGUST 9">
+          <VoteSection slotTitle="VOTE TUESDAY APRIL 4">
             <p>
               Find your{" "}
               <a

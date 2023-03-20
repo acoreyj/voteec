@@ -1,1 +1,1 @@
-export const s3url = "https://assets.geniecloud.xyz";
+export const s3url = "https://serve-cdn-assets.geniecode.workers.dev";
