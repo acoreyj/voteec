@@ -83,13 +83,13 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
               <ReactFitText maxFontSize={55} compressor={1.5}>
                 <h2>
                   <span className="line font-semibold">
-                    Eau Claire's Next Election is the 2023 Spring Election on
+                    Eau Claire's Next Election is the 2024 Spring Election on
                   </span>
                 </h2>
               </ReactFitText>
               <ReactFitText minFontSize={30} maxFontSize={85}>
                 <h1>
-                  <span className="line font-extrabold">TUESDAY, APRIL 4</span>
+                  <span className="line font-extrabold">TUESDAY, APRIL 2</span>
                 </h1>
               </ReactFitText>
             </div>
@@ -134,7 +134,7 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
                 >
                   ONLINE
                 </a>
-                <p className="subtext text-center">By March 15</p>
+                <p className="subtext text-center">By March 13</p>
               </div>
               <div className="flex basis-1/3 flex-col gap-1">
                 <a
@@ -146,8 +146,13 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
                   IN PERSON
                 </a>
                 <p className="subtext text-center">
-                  March 31, 2023 @ 5:00 p.m at your Municipal Clerk's Office or
-                  register at your polling place on election day.
+                  <ul className="ml-4 list-disc">
+                    <li>At your polling place on election day.</li>
+                    <li>
+                      By March 29, 2024 @ 5:00 p.m at your Municipal Clerk's
+                      Office
+                    </li>
+                  </ul>
                 </p>
               </div>
               <div className="flex basis-1/3 flex-col gap-1">
@@ -169,7 +174,7 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
                   >
                     your clerk
                   </a>{" "}
-                  by March 15.
+                  by March 13.
                 </p>
               </div>
             </div>
@@ -178,7 +183,7 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
         <div className="w-full bg-redTransparent py-8 px-4">
           <VoteSection
             slotTitle="Vote Early in Person"
-            slotSubtitle="March 21 - March 31"
+            slotSubtitle="March 19 - March 29"
           >
             <div className="items-center text-center">
               <p>
@@ -354,7 +359,7 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
           </VoteSection>
         </div>
         <div className="w-full bg-redTransparent py-8 px-4">
-          <VoteSection slotTitle="VOTE TUESDAY APRIL 4">
+          <VoteSection slotTitle="VOTE TUESDAY APRIL 2">
             <p>
               Find your{" "}
               <a
@@ -403,7 +408,7 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
                 <h1>
                   <p>
                     <a
-                      href="https://www.eauclairewi.gov/government/our-divisions/elections"
+                      href="https://www.eauclairewi.gov/government/our-divisions/city-clerk/elections"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="link "
