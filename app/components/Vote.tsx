@@ -5,6 +5,29 @@ import { s3url } from "~/config";
 import { VoteSection } from "~/components/VoteSection";
 
 const Vote = () => {
+  let electionDate = new Date("August 13, 2024 00:00:00");
+  let electionName = "2024 Fall Partisan Primary Election";
+
+  if (new Date().getTime() >= new Date("2024-08-13").getTime()) {
+    electionDate = new Date("November 5, 2024 00:00:00");
+    electionName = "2024 General Election";
+  }
+
+  const registerMailByDate = new Date(electionDate);
+  registerMailByDate.setDate(registerMailByDate.getDate() - 20);
+  const registerOnlineByDate = registerMailByDate;
+  const clerkByDate = new Date(electionDate);
+  // Friday before
+  clerkByDate.setDate(clerkByDate.getDate() - 4);
+  console.log(clerkByDate);
+
+  const formatDate = (date: Date) => {
+    return new Intl.DateTimeFormat("en-US", {
+      month: "long",
+      day: "numeric",
+    }).format(new Date(date));
+  };
+
   return (
     <div className="flex flex-col gap-4">
       <div className="container">
@@ -83,13 +106,15 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
               <ReactFitText maxFontSize={55} compressor={1.5}>
                 <h2>
                   <span className="line font-semibold">
-                    Eau Claire's Next Election is the 2024 Spring Election on
+                    Eau Claire's Next Election is the {electionName} on
                   </span>
                 </h2>
               </ReactFitText>
               <ReactFitText minFontSize={30} maxFontSize={85}>
                 <h1>
-                  <span className="line font-extrabold">TUESDAY, APRIL 2</span>
+                  <span className="line font-extrabold">
+                    Tuesday {formatDate(electionDate)}
+                  </span>
                 </h1>
               </ReactFitText>
             </div>
@@ -113,17 +138,6 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
               </span>
             }
           >
-            <span>
-              Check your registration{" "}
-              <a
-                href="https://myvote.wi.gov/en-US/RegisterToVote"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="link "
-              >
-                here
-              </a>
-            </span>
             <div className="flex justify-between gap-4">
               <div className="flex basis-1/3 flex-col gap-1">
                 <a
@@ -134,7 +148,9 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
                 >
                   ONLINE
                 </a>
-                <p className="subtext text-center">By March 13</p>
+                <p className="subtext text-center">
+                  By {formatDate(registerOnlineByDate)}
+                </p>
               </div>
               <div className="flex basis-1/3 flex-col gap-1">
                 <a
@@ -149,8 +165,8 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
                   <ul className="ml-4 list-disc">
                     <li>At your polling place on election day.</li>
                     <li>
-                      By March 29, 2024 @ 5:00 p.m at your Municipal Clerk's
-                      Office
+                      By {formatDate(clerkByDate)}, {clerkByDate.getFullYear()}{" "}
+                      @ 5:00 p.m at your Municipal Clerk's Office
                     </li>
                   </ul>
                 </p>
@@ -160,7 +176,7 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
                   className="btn btn-warning"
                   rel="noreferrer"
                   target="_blank"
-                  href="https://elections.wi.gov/forms/el-131-fillable"
+                  href="https://myvote.wi.gov/en-us/Register-To-Vote"
                 >
                   BY MAIL
                 </a>
@@ -174,7 +190,7 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
                   >
                     your clerk
                   </a>{" "}
-                  by March 13.
+                  by {formatDate(registerMailByDate)}.
                 </p>
               </div>
             </div>
@@ -183,9 +199,9 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
         <div className="w-full bg-redTransparent py-8 px-4">
           <VoteSection
             slotTitle="Vote Early in Person"
-            slotSubtitle="March 19 - March 29"
+            // slotSubtitle="March 19 - March 29"
           >
-            <div className="items-center text-center">
+            <div className="flex flex-col items-center text-center">
               <p>
                 Photo ID <strong>is required </strong>to receive a ballot. To
                 learn more about acceptable Photo ID visit{" "}
@@ -201,7 +217,7 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
               </p>
               <DaisyCard
                 title="Search For Your Options"
-                className="min-w-full bg-base-100 shadow-xl"
+                className="flex max-w-max justify-center bg-base-100 shadow-xl"
               >
                 <div className="text-left">
                   <a
@@ -359,7 +375,7 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
           </VoteSection>
         </div>
         <div className="w-full bg-redTransparent py-8 px-4">
-          <VoteSection slotTitle="VOTE TUESDAY APRIL 2">
+          <VoteSection slotTitle={`VOTE TUESDAY, ${formatDate(electionDate)}`}>
             <p>
               Find your{" "}
               <a
