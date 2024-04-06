@@ -113,7 +113,7 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
               <ReactFitText minFontSize={30} maxFontSize={85}>
                 <h1>
                   <span className="line font-extrabold">
-                    Tuesday {formatDate(electionDate)}
+                    Tuesday, {formatDate(electionDate)}
                   </span>
                 </h1>
               </ReactFitText>
