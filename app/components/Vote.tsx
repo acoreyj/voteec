@@ -21,11 +21,32 @@ const Vote = () => {
   clerkByDate.setDate(clerkByDate.getDate() - 4);
   console.log(clerkByDate);
 
+  // Calculate early voting dates
+  const earlyVotingEnd = new Date(electionDate);
+  // Set to previous Friday
+  earlyVotingEnd.setDate(electionDate.getDate() - (electionDate.getDay() + 2));
+
+  const earlyVotingStart = new Date(earlyVotingEnd);
+  // Go back 2 weeks and set to Tuesday
+  earlyVotingStart.setDate(earlyVotingEnd.getDate() - 10);
+
   const formatDate = (date: Date) => {
     return new Intl.DateTimeFormat("en-US", {
       month: "long",
       day: "numeric",
     }).format(new Date(date));
+  };
+
+  const formatDateRange = (start: Date, end: Date) => {
+    return `${formatDate(start)} - ${formatDate(end)}, ${start.getFullYear()}`;
+  };
+
+  const formatDateRangeLong = (start: Date, end: Date) => {
+    const startDay = start.toLocaleString("en-US", { weekday: "long" });
+    const endDay = end.toLocaleString("en-US", { weekday: "long" });
+    return `${startDay}, ${formatDate(start)} through ${endDay}, ${formatDate(
+      end
+    )}, ${start.getFullYear()}`;
   };
 
   return (
@@ -199,7 +220,7 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
         <div className="w-full bg-redTransparent py-8 px-4">
           <VoteSection
             slotTitle="Vote Early in Person"
-            slotSubtitle="February 4 - February 14, 2025"
+            slotSubtitle={formatDateRange(earlyVotingStart, earlyVotingEnd)}
           >
             <div className="flex flex-col items-center gap-8 text-center">
               <p>
@@ -226,8 +247,8 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
                   </p>
                   <br />
                   <p>
-                    <strong>Dates:</strong> Tuesday, February 4, 2025 through
-                    Friday, February 14, 2025
+                    <strong>Dates:</strong>{" "}
+                    {formatDateRangeLong(earlyVotingStart, earlyVotingEnd)}
                   </p>
                   <br />
                   <p>
