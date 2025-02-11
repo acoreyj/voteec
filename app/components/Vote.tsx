@@ -5,12 +5,12 @@ import { s3url } from "~/config";
 import { VoteSection } from "~/components/VoteSection";
 
 const Vote = () => {
-  let electionDate = new Date("August 13, 2024 00:00:00");
-  let electionName = "2024 Fall Partisan Primary Election";
+  let electionDate = new Date("February 18, 2025 00:00:00");
+  let electionName = "2025 Spring Primary";
 
-  if (new Date().getTime() >= new Date("2024-08-13").getTime()) {
-    electionDate = new Date("November 5, 2024 00:00:00");
-    electionName = "2024 General Election";
+  if (new Date().getTime() >= new Date("2025-02-18").getTime()) {
+    electionDate = new Date("April 1, 2025 00:00:00");
+    electionName = "2025 Spring Election";
   }
 
   const registerMailByDate = new Date(electionDate);
@@ -199,9 +199,9 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
         <div className="w-full bg-redTransparent py-8 px-4">
           <VoteSection
             slotTitle="Vote Early in Person"
-            // slotSubtitle="March 19 - March 29"
+            slotSubtitle="February 4 - February 14, 2025"
           >
-            <div className="flex flex-col items-center text-center">
+            <div className="flex flex-col items-center gap-8 text-center">
               <p>
                 Photo ID <strong>is required </strong>to receive a ballot. To
                 learn more about acceptable Photo ID visit{" "}
@@ -213,8 +213,46 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
                 >
                   Bring It to the Ballot
                 </a>
-                .<br /> <br />
+                .
               </p>
+              <DaisyCard
+                title="Eau Claire In-Person Absentee Voting Information"
+                className="min-w-full bg-base-100 shadow-xl"
+              >
+                <div className="text-left">
+                  <p>
+                    <strong>Location:</strong> Elections Office, across the
+                    alley from City Hall, 203 S. Farwell Street
+                  </p>
+                  <br />
+                  <p>
+                    <strong>Dates:</strong> Tuesday, February 4, 2025 through
+                    Friday, February 14, 2025
+                  </p>
+                  <br />
+                  <p>
+                    <strong>Hours:</strong> Monday through Friday: 9 a.m. to 4
+                    p.m.
+                  </p>
+                  <br />
+                  <p>
+                    Parking available in:
+                    <ul className="list-disc pl-6">
+                      <li>City Hall parking lot</li>
+                      <li>Street parking</li>
+                      <li>Farwell/Gibson Street Parking Ramp</li>
+                    </ul>
+                  </p>
+                  <br />
+                  <p>
+                    <strong>Accessibility Note:</strong> While drive-thru voting
+                    is no longer available, individuals with disabilities,
+                    including those using wheelchairs or with significant
+                    mobility challenges, may vote curbside. Call 715-839-4913
+                    from the parking lot for assistance.
+                  </p>
+                </div>
+              </DaisyCard>
               <DaisyCard
                 title="Search For Your Options"
                 className="flex max-w-max justify-center bg-base-100 shadow-xl"
@@ -226,43 +264,8 @@ ${s3url}/vote/images/clark-van-der-beken-Tk0B3Dfkf_4-unsplash/clark-van-der-beke
                   >
                     Search by address
                   </a>
-                  {/* <p>
-                    <strong>Location:</strong> City Hall parking lot, 203 S.
-                    Farwell St.
-                  </p>
-                  <br />
-                  <p>
-                    <strong>Dates:</strong> Tuesday, March 22, 2022 through
-                    Friday, April 1, 2022
-                  </p>
-                  <br />
-                  <p>
-                    <strong>Hours:</strong> Monday through Friday: 9 a.m. to 4
-                    p.m.
-                  </p> */}
                 </div>
               </DaisyCard>
-              {/* <DaisyCard
-                title="Non Eau Claire Residents"
-                className="mt-4 min-w-full bg-base-100 shadow-xl"
-              >
-                <p className="text-left">
-                  Dates and hours vary, see your{" "}
-                  <a href="#footer" className="link">
-                    local election info website
-                  </a>{" "}
-                  or check with your{" "}
-                  <a
-                    href="https://myvote.wi.gov/en-US/MyMunicipalClerk"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="link"
-                  >
-                    municipal clerk
-                  </a>
-                  .
-                </p>
-              </DaisyCard> */}
             </div>
           </VoteSection>
         </div>
